@@ -32,7 +32,7 @@ return function deepmerge(target, src) {
                 dst[key] = target[key];
             })
         }
-        Object.keys(src).forEach(function (key) {
+        Object.keys(src || {} ).forEach(function (key) {
             if (typeof src[key] !== 'object' || !src[key]) {
                 dst[key] = src[key];
             }
